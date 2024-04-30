@@ -54,8 +54,14 @@ docker build -t lydev/workdir workdir
 docker container create --name "workdir" -p 8080:8080 lydev/workdir # Create container from image lydev/workdir
 docker container start workdir # Start container workdir and see result in https://localhost:8080
 
-# Work directory
+# User
 docker build -t lydev/user user
 docker container create --name "user" -p 8080:8080 lydev/user # Create container from image lydev/user
 docker container start user # Start container user and see result in https://localhost:8080
 docker container exec -i -t user sh -c "whoami" # See user which usage for user container
+
+
+# Arg instruction
+docker build -t lydev/arg arg --build-arg app="lydev"
+docker container create --name "arg" -p 8080:8080 lydev/arg # Create container from image lydev/arg
+docker container start arg # Start container arg and see result in https://localhost:8080
