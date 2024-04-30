@@ -48,3 +48,8 @@ docker container logs env # See the listened port on go server
 docker build -t lydev/volume volume
 docker image inpect volume # Inspect the volume
 docker container create --name "volume" --env APP_PORT="8080" -p 8080:8080 lydev/volume # Create container from lydev/volume
+
+# Work directory
+docker build -t lydev/workdir workdir
+docker container create --name "workdir" -p 8080:8080 lydev/workdir # Create container from image lydev/workdir
+docker container start workdir # Start container workdir and see result in https://localhost:8080
