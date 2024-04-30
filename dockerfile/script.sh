@@ -25,3 +25,10 @@ docker build -t lydev/copy copy
 docker container create --name "copy" lydev/copy # Create container from image lydev/copy
 docker container start copy # Start container copy
 docker container logs copy # See the result of COPY instruction from file-1.txt
+
+
+# Docker ignore
+docker build -t lydev/dockerignore dockerignore
+docker container create --name "dockerignore" lydev/dockerignore # Create container from image lydev/dockerignore
+docker container start dockerignore # Start container dockerignore
+docker container logs dockerignore # See the result of Dockerignore
