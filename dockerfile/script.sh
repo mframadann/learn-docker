@@ -37,3 +37,9 @@ docker container logs dockerignore # See the result of Dockerignore
 docker build -t lydev/expose expose
 docker container create --name "expose" -p 8080:8080 lydev/expose # Create container from image lydev/expose
 docker container start expose # Start container expose and see result in https://localhost:8080
+
+# ENV variable
+docker build -t lydev/env env
+docker container create --name "env" --env "APP_PORT=8080" -p 8080:8081 lydev/env # Create container from image lydev/env and assign the env variable
+docker container start env # Start container env and see result in https://localhost:8080
+docker container logs env # See the listened port on go server
