@@ -65,3 +65,9 @@ docker container exec -i -t user sh -c "whoami" # See user which usage for user 
 docker build -t lydev/arg arg --build-arg app="lydev"
 docker container create --name "arg" -p 8080:8080 lydev/arg # Create container from image lydev/arg
 docker container start arg # Start container arg and see result in https://localhost:8080
+
+# Healtcheck
+docker build -t lydev/healtcheck healtcheck # Building the image
+docker container create --name "healtcheck" lydev/healtcheck # Create container from image lydev/healtcheck
+docker container start healtcheck # Start container healtcheck 
+docker container ls # See the result
