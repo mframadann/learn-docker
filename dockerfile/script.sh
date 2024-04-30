@@ -71,3 +71,10 @@ docker build -t lydev/healtcheck healtcheck # Building the image
 docker container create --name "healtcheck" lydev/healtcheck # Create container from image lydev/healtcheck
 docker container start healtcheck # Start container healtcheck 
 docker container ls # See the result
+
+
+#Entrypoint
+docker build -t lydev/entrypoint entrypoint
+docker container create --name "entrypoint" lydev/entrypoint # Create container from image lydev/entrypoint
+docker container start entrypoint # Start container entrypoint 
+docker container exec -it  entrypoint sh # See the entrypoint
