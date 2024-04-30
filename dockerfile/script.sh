@@ -13,3 +13,5 @@ docker container start cmd # Start container cmd
 docker container logs cmd # See the result of CMD instruction
 
 # Label instruction
+docker build -t lydev/label label
+docker image inspect lydev/label # See the result of label instruction
