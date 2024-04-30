@@ -78,3 +78,8 @@ docker build -t lydev/entrypoint entrypoint
 docker container create --name "entrypoint" lydev/entrypoint # Create container from image lydev/entrypoint
 docker container start entrypoint # Start container entrypoint 
 docker container exec -it  entrypoint sh # See the entrypoint
+
+#Multi stage builder
+docker build -t lydev/multi multi
+docker container create --name "multi" lydev/multi # Create container from image lydev/multi
+docker container start multi # Start container multi 
