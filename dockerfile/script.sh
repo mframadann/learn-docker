@@ -53,3 +53,9 @@ docker container create --name "volume" --env APP_PORT="8080" -p 8080:8080 lydev
 docker build -t lydev/workdir workdir
 docker container create --name "workdir" -p 8080:8080 lydev/workdir # Create container from image lydev/workdir
 docker container start workdir # Start container workdir and see result in https://localhost:8080
+
+# Work directory
+docker build -t lydev/user user
+docker container create --name "user" -p 8080:8080 lydev/user # Create container from image lydev/user
+docker container start user # Start container user and see result in https://localhost:8080
+docker container exec -i -t user sh -c "whoami" # See user which usage for user container
