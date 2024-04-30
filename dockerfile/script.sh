@@ -19,3 +19,9 @@ docker image inspect lydev/label # See the result of label instruction
 # Add instruction
 docker build -t lydev/add add
 docker build -t lydev/add add --progress=plain --no-cache ## Run with inspect output without cache
+
+# Copy instruction
+docker build -t lydev/copy copy
+docker container create --name "copy" lydev/copy # Create container from image lydev/copy
+docker container start copy # Start container copy
+docker container logs copy # See the result of COPY instruction from file-1.txt
