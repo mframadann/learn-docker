@@ -32,3 +32,8 @@ docker build -t lydev/dockerignore dockerignore
 docker container create --name "dockerignore" lydev/dockerignore # Create container from image lydev/dockerignore
 docker container start dockerignore # Start container dockerignore
 docker container logs dockerignore # See the result of Dockerignore
+
+# Expose instruction
+docker build -t lydev/expose expose
+docker container create --name "expose" -p 8080:8080 lydev/expose # Create container from image lydev/expose
+docker container start expose # Start container expose and see result in https://localhost:8080
