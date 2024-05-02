@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  nginx-container:
+    container_name: "nginx-container"
+    image: nginx:latest
+    ports:
+      - protocol: tcp
+        published: 8080
+        target: 80
